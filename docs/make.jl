@@ -48,7 +48,7 @@ makedocs(;
     sitename="FiniteKernel.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://github.com/garam-kim/kernelherding",
+        canonical="https://ZIB-IOL.github.io/kernelherding",
         edit_link="main",
         assets=String[],
     ),
