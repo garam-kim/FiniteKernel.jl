@@ -45,7 +45,7 @@ makedocs(;
     modules=[KernelHerding],
     authors="Garam Kim <garam.tolba@gmail.com>",
     repo="https://github.com/garam-kim/kernelherding/{commit}{path}#{line}",
-    sitename="FiniteKernel.jl",
+    sitename="FiniteKernel",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
         canonical="https://garam-kim.github.io/FiniteKernel/",
