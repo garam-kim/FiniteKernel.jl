@@ -38,7 +38,7 @@ literate_directory(EXAMPLE_DIR, DOCS_EXAMPLE_DIR)
 ENV["GKSwstype"] = "100"
 
 generated_path = joinpath(@__DIR__, "src")
-base_url = "https://github.com/garam-kim/kernelherding/blob/master/"
+base_url = "https://github.com/garam-kim/kernelherding/"
 isdir(generated_path) || mkdir(generated_path)
 
 makedocs(;
