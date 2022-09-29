@@ -44,7 +44,7 @@ isdir(generated_path) || mkdir(generated_path)
 makedocs(;
     modules=[KernelHerding],
     authors="Garam Kim <garam.tolba@gmail.com>",
-    repo="https://github.com/garam-kim/kernelherding/blob/{commit}{path}#{line}",
+    repo="https://github.com/garam-kim/kernelherding/{commit}{path}#{line}",
     sitename="FiniteKernel.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
