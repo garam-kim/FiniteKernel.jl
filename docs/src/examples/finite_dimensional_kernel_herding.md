@@ -15,9 +15,9 @@ include(joinpath(dirname(pathof(FrankWolfe)), "../examples/plot_utils.jl"))
 We focus on a specific kernel studied in ([Bach et al.](https://icml.cc/2012/papers/683.pdf)), that has a finite dimensional feature space.
 Let $\mathcal{Y} = \{-1, 1\}^d $ and
 ```math
-\mathcal{H}:= \left\lbrace f \colon \mathcal{Y} \to \mathbb{R} \mid f(y) = \langle f, \Phi(y) \rangle_\mathcal{H}, \text{ and } \Phi(y)=(y, yy^T) \right\rbrace.
+\mathcal{H}:= \left\lbrace f \colon \mathcal{Y} \to \mathbb{R} \mid f(y) = \langle f, \Phi(y) \rangle_\mathcal{H}, \text{ where} \Phi(y)=(y, yy^T) \right\rbrace.
 ```
-The feature map is composed of $y$ and of all of its pairwise products $yy^T$. i.e., $\Phi(y) = (y_1, y_2, y_1^2, y_1y_2, y_2y_1, y_2^2)$ for $y = (y_1, y_2) \in \{-1, 1\}^2$.
+The feature map is composed of $y$ and of all of its pairwise products $yy^T$. i.e., $\Phi(y) = (y, yy^T) = (y_1, y_2, y_1^2, y_1y_2, y_2y_1, y_2^2)$ for $y = (y_1, y_2) \in \{-1, 1\}^2$.
 For $w, x \in \mathcal{H}$,
 ```math
 \langle w, x \rangle_\mathcal{H} := \sum_{i = 1}^{d} w_i(y)x_i(y)
@@ -90,13 +90,13 @@ rho = rand(Float64, 2^dim)
 We then normalize the vectors to obtain a $p$ that is indeed a distribution.
 
 ````@example finite_dimensional_kernel_herding
-p = FiniteKernel.get_distribution(rho)
+p = get_distribution(rho)
 ````
 
 We then run the experiments.
 
 ````@example finite_dimensional_kernel_herding
-mu = FiniteKernel.NonZeroMeanElement(p)
+mu = NonZeroMeanElement(p)
 iterate = KernelHerdingIterate([1.0], [ones(Float64, dim)])
 gradient = KernelHerdingGradient(iterate, mu)
 f, grad = create_loss_function_gradient(mu)
