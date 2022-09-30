@@ -1,7 +1,7 @@
 using Documenter
 using LinearAlgebra
 using FrankWolfe
-using FiniteKernel
+using .FiniteKernel
 using SparseArrays
 
 using Literate, Test

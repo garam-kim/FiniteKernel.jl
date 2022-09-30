@@ -1,0 +1,8 @@
+name = "FiniteKernel"
+uuid = "f3ae3385-ba66-4976-a5e9-7e3a2a220fc0"
+authors = ["garam-kim <68359751+garam-kim@users.noreply.github.com>"]
+version = "0.1.0"
+
+[deps]
+FrankWolfe = "f55ce6ea-fdc5-4628-88c5-0087fe54bd30"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"

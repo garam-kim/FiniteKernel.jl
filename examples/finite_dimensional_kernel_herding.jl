@@ -2,14 +2,14 @@ using FrankWolfe
 using Plots
 using LinearAlgebra
 using Random
-
+using FiniteKernel
 include(joinpath(dirname(pathof(FrankWolfe)), "../examples/plot_utils.jl"))
 
 # ## Finite-dimensional kernel herding
 # We focus on a specific kernel studied in ([Bach et al.](https://icml.cc/2012/papers/683.pdf)), that has a finite dimensional feature space.
 # Let $\mathcal{Y} = \{-1, 1\}^d $ and
 # ```math
-# \mathcal{H}:= \left\lbrace f \colon \mathcal{Y} \to \mathbb{R} \mid f(y) = \langle f, \Phi(y) \rangle_\mathcal{H}, and \Phi(y)=(y, yy^T) \right\rbrace.
+# \mathcal{H}:= \left\lbrace f \colon \mathcal{Y} \to \mathbb{R} \mid f(y) = \langle f, \Phi(y) \rangle_\mathcal{H}, \text{ and } \Phi(y)=(y, yy^T) \right\rbrace.
 # ```
 # The feature map is composed of $y$ and of all of its pairwise products $yy^T$. i.e., $\Phi(y) = (y_1, y_2, y_1^2, y_1y_2, y_2y_1, y_2^2)$ for $y = (y_1, y_2) \in \{-1, 1\}^2$.
 # For $w, x \in \mathcal{H}$,
@@ -72,10 +72,10 @@ plot_trajectories(data, labels, xscalelog=true)
 # Hence, we start with an arbitrary vectors:
 rho = rand(Float64, 2^dim)
 # We then normalize the vectors to obtain a $p$ that is indeed a distribution.
-p = get_distribution(rho)
+p = FiniteKernel.get_distribution(rho)
 
 # We then run the experiments.
-mu = NonZeroMeanElement(p)
+mu = FiniteKernel.NonZeroMeanElement(p)
 iterate = KernelHerdingIterate([1.0], [ones(Float64, dim)])
 gradient = KernelHerdingGradient(iterate, mu)
 f, grad = create_loss_function_gradient(mu)
