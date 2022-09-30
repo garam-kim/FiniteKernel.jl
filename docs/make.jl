@@ -38,17 +38,17 @@ literate_directory(EXAMPLE_DIR, DOCS_EXAMPLE_DIR)
 ENV["GKSwstype"] = "100"
 
 generated_path = joinpath(@__DIR__, "src")
-base_url = "https://github.com/garam-kim/FiniteKernel/"
+base_url = "https://github.com/garam-kim/FiniteKernel/blob/master/"
 isdir(generated_path) || mkdir(generated_path)
 
 makedocs(;
     modules=[FiniteKernel],
     authors="Garam Kim <garam.tolba@gmail.com>",
-    repo="https://github.com/garam-kim/FiniteKernel/{commit}{path}#{line}",
+    repo="https://github.com/garam-kim/FiniteKernel/blob/{commit}{path}#{line}",
     sitename="FiniteKernel",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://garam-kim.github.io/FiniteKernel/",
+        canonical="https://garam-kim.github.io/FiniteKernel",
         edit_link="main",
         assets=String[],
     ),
