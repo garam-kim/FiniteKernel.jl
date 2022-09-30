@@ -61,7 +61,7 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/garam-kim/kernelherding",
+    repo="github.com/garam-kim/FiniteKernel",
     devbranch="main",
     push_preview=true,
 )
