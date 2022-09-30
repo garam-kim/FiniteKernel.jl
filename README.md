@@ -1,3 +1,3 @@
 # kernelherding
 
-[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://github.com/garam-kim/finitekernel/dev/)
+[![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://garam-kim.github.io/FiniteKernel//dev/)
