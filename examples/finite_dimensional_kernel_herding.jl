@@ -98,3 +98,4 @@ plot_trajectories(data, labels, xscalelog=true)
 # Bach, F., Lacoste-Julien, S. and Obozinski, G., 2012, June. On the Equivalence between Herding and Conditional Gradient Algorithms. [In ICML 2012 International Conference on Machine Learning.](https://icml.cc/2012/papers/683.pdf)
 
 # Wirth, E., Kerdreux, T. and Pokutta, S., 2022. Acceleration of Frank-Wolfe algorithms with open loop step-sizes. [arXiv preprint arXiv:2205.12838.](https://arxiv.org/pdf/2205.12838.pdf)
+
