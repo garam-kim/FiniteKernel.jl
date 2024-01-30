@@ -14,9 +14,9 @@ For Matern Kernel in infinite-dimensional setting, move to [$\texttt{MaternKerne
 
 We focus on a specific kernel studied in ([Bach et al.](https://icml.cc/2012/papers/683.pdf)), that has a finite dimensional feature space.
 Let $\mathcal{Y} = \{-1, 1\}^d $ be a feature space with dimension $d \in \mathbb{N}$ and
-$$
-\mathcal{H}:= \left\lbrace f \colon \mathcal{Y} \to \mathbb{R} \mid f(y) = \langle f, \Phi(y) \rangle_\mathcal{H}, \text{ where } \Phi(y)=(y, yy^T) \right\rbrace
-$$
+```math
+\mathcal{H}:= \left\lbrace f \colon \mathcal{Y} \to \mathbb{R} \mid f(y) = \langle f, \Phi(y) \rangle_\mathcal{H}, \text{ where } \Phi(y)=(y, yy^T) \right\rbrace,
+```
 a Reproducing Kernel Hilbert Space (RKHS) with inner product $\langle \cdot, \cdot \rangle_\mathcal{H}$ defined by
 $$
 \langle f, g \rangle_\mathcal{H} := \sum_{i = 1}^{d} f_i(y)g_i(y)
