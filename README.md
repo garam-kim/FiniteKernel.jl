@@ -36,7 +36,7 @@ We denote $\mathcal{M} \subset \mathcal{H}$ the marginal polytope defined by $\m
 ```math
 \mu : = \mathbb{E}_{p(x)} \Phi(x) = \sum_{i=1}^{2^d} p_i(x)\Phi_i(x) \in \mathcal{M}.
 ```
-Since LMO always returns an element of the form $\Phi(x) \in \mathcal{M}$ for $ x \in \mathcal{X}$, the iterate $g_t$ constructed with FW is of the form $\sum_{i=1}^t w_i \Phi(x_i)$. The associated empirical mean with corresponding empirical distribution $\hat{p}(x)$ is defined by
+Since LMO always returns an element of the form $\Phi(x) \in \mathcal{M}$ for $x \in \mathcal{X}$, the iterate $g_t$ constructed with FW is of the form $\sum_{i=1}^t w_i \Phi(x_i)$. The associated empirical mean with corresponding empirical distribution $\hat{p}(x)$ is defined by
 ```math
 \hat{\mu} := \mathbb{E}_{\hat{p}(x)}\Phi(x) = \sum_{i=1}^t w_i\Phi(x_i) = g_t.
 ```
